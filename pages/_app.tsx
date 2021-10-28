@@ -1,8 +1,17 @@
-import '../styles/globals.css'
+import '@styles/globals.css'
 import type { AppProps } from 'next/app'
+import {DivisionContext} from '@context/state'
+import { useState } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const [division, setDivision] = useState('')
+
+  return (
+  <DivisionContext.Provider value={{division,setDivision}}>
+    <Component {...pageProps} />
+    {division}
+  </DivisionContext.Provider>
+  )
 }
 
 export default MyApp
