@@ -1,0 +1,24 @@
+@use '@styles/variables.scss' as *;
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body, html {
+  padding: 0;
+  margin: 0;
+  transition: 0.1s;
+  font-family: 'Work Sans', sans-serif;
+  color: $mainText;
+  background-color: black;
+}
+a:visited {
+  color: inherit;
+}

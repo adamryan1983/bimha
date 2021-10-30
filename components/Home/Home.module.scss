@@ -1,0 +1,34 @@
+.containerHome {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('/images/background-fade.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+.landing {
+  display: flex;
+  padding-top: 6rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80vw;
+  height: 60vh;
+  .heading {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 6rem;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+}
