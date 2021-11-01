@@ -6,3 +6,11 @@ $fithColor: #F9F9F9;
 
 $mainText: rgb(245, 245, 245);
 $mainBG: rgb(17, 17, 17);
+$darkText: rgb(17,17,17);
+
+
+@mixin displayFlexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

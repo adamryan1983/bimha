@@ -1,5 +1,39 @@
+@use '@styles/variables.scss' as *;
+
 .left {
-  background-color: antiquewhite;
   height: 100%;
-  widtH: 70%;
+  width: 70%;
+  background-color: white;
+  color: $darkText;
+  margin-right: 2rem;
 }
+
+.newsContainer {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header {
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid $primaryColor;
+  position: relative;
+  padding: 7px 0;
+  margin-bottom: 30px;
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+}
+.header:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 12px 12px;
+  border-color: transparent transparent $primaryColor transparent;
+  }

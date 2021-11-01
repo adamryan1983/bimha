@@ -1,11 +1,12 @@
-@use '@styles/variables.scss' as *;
-
 .container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20vh;
-  background-color: white;
-  color: $darkText;
+}
+
+.dataTable {
+  color: white;
+  background-color: black;
 }

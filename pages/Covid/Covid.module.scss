@@ -1,6 +1,15 @@
+@use '@styles/variables.scss' as *;
 .container {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include displayFlexCenter;
+}
+
+.content {
+  padding: 1.5rem;
+  width: 70%;
+  heighT: 80%;
+  background-color:$primaryColor;
+  box-shadow: 0.5rem 0.5rem 1rem white;
+  color: black;
+  border-radius: 10px;
 }

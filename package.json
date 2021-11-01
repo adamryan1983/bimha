@@ -13,9 +13,13 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^6.0.0-beta2",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "dotenv": "^10.0.0",
     "next": "12.0.1",
+    "primeicons": "^4.1.0",
+    "primereact": "^6.6.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-transition-group": "^4.4.2",
     "sass": "^1.43.4"
   },
   "devDependencies": {

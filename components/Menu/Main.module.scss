@@ -14,6 +14,7 @@
   display: flex;
   height: 12vh;
   background-color: white;
+  z-index:9999;
   .logo {
     display: flex;
     flex-direction: row;
@@ -29,9 +30,9 @@
               0px 18px 23px rgba(0,0,0,0.1);
     }
     & h4 {
-      color: $primaryColor;
+      color: $secondaryColor;
       text-align: right;
-      font-weight: 300;
+      font-weight: 400;
       font-size: calc(0.5vw + 0.5vh + 0.2vmin);
     }
   }
@@ -55,6 +56,7 @@
   justify-content: flex-end;
   align-items: center;
   list-style: none;
+  z-index:9999;
   & li, a {
     display: flex;
     justify-content: center;
@@ -160,8 +162,12 @@
     padding: 1rem 2rem;
     height: 4vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    &:hover {
+      color: $primaryColor;
+    }
   }
   & a {
       text-decoration: none;
@@ -169,6 +175,11 @@
         color: $primaryColor;
       }
   }
+}
+.btn {
+  padding: 0.8rem 1.5rem;
+  background-color: $secondaryColor;
+  border: none;
 }
 
 //stick

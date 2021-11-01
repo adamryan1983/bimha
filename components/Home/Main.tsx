@@ -1,6 +1,7 @@
 import styles from './Main.module.scss'
 import Left from '@components/Home/Left/Left'
 import Right from '@components/Home/Right/Right'
+import Social from './Social/Social'
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
         <Left />
         <Right />
       </main>
+      <Social />
     </div>
   )
 }
