@@ -26,7 +26,7 @@ const Covid = () => {
 
       <h2>Where proof of vaccination is required</h2> 
 
-<p>By October 22, 2021, you must be fully vaccinated or have an approved medical exemption in order to access the following businesses and settings:</p>
+<p>By Octoberr 22, 2021, you must be fully vaccinated or have an approved medical exemption in order to access the following businesses and settings:</p>
 
 <ul>
   <li>Gatherings of any size held for socializing, celebration, ceremony or entertainment that are hosted at a recognized business or organization, a rental room, community centre, or other venues used to host gatherings (e.g. weddings, funerals, birthday parties, baby showers, faith-based gatherings)</li>
