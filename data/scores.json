@@ -1,0 +1,9 @@
+{
+  "data": [
+    {"id": 1, "team1Name": "Bell Island", "team2Name": "St. John's", "division": "Bantam", "team1Score": 2, "team2Score": 5, "date": "November 3, 2021"},
+    {"id": 2, "team1Name": "Goulds", "team2Name": "Bell Island", "division": "Timbits", "team1Score": 3, "team2Score": 2, "date": "November 1, 2021"},
+    {"id": 3, "team1Name": "Bell Island", "team2Name": "CBS", "division": "Bantam", "team1Score": 4, "team2Score": 1, "date": "November 20, 2021"},
+    {"id": 4, "team1Name": "Bell Island", "team2Name": "Southern Shore", "division": "Midget", "team1Score": 6, "team2Score": 7, "date": "November 11, 2021"},
+    {"id": 5, "team1Name": "CBS", "team2Name": "Bell Island", "division": "Atoms", "team1Score": 1, "team2Score": 3, "date": "November 7, 2021"}
+  ]
+}

@@ -1,15 +1,52 @@
 @use '@styles/variables.scss' as *;
+
 .container {
   height: 100vh;
   @include displayFlexCenter;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .content {
   padding: 1.5rem;
   width: 70%;
-  heighT: 80%;
+  min-height: 80%;
   background-color:$primaryColor;
-  box-shadow: 0.5rem 0.5rem 1rem white;
+  box-shadow: 0.5rem 0.5rem 0.5rem white;
   color: black;
   border-radius: 10px;
+}
+
+.title {
+  color: $secondaryColor;
+  font-size: calc(0.5vw + 0.5vh + 1rem);
+}
+.subTitle {
+  color: $fourthColor;
+  font-size: calc(0.5vw + 0.5vh + 0.5rem);
+}
+
+.paragraph {
+  font-size: calc(0.5vw + 0.5vh + 0.2rem);
+  font-style: italic;
+  padding: 0.5rem 1rem;
+}
+
+.covidList {
+  list-style: none;
+  & li {
+    font-size: calc(0.5vw + 0.5vh + 0.2rem);
+    padding: 0.3rem 2rem;
+    font-weight: 700;
+  }
+}
+
+.emph {
+  font-weight: 700;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer {
+  font-weight: 500;
 }

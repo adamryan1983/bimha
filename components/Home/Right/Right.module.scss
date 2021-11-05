@@ -1,5 +1,210 @@
+@use '@styles/variables.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
 .right {
   background-color: rgb(215, 250, 232);
   width: 30%;
-  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: white;
+}
+
+.coachContainer {
+  margin: 0.8rem 0 ;
+  background-color: $fourthColor;
+  @include displayFlexCenter;
+  flex-direction: column;
+  width: 100%;
+  max-height: 50%;
+  & ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+.gamesContainer {
+  margin: 0.8rem 0 ;
+  background-color: $fourthColor;
+  @include displayFlexCenter;
+  flex-direction: column;
+  width: 100%;
+  max-height: 50%;
+  & ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+.newsletterContainer {
+  margin: 0.8rem 0 ;
+  background-color: $primaryColor;
+  @include displayFlexCenter;
+  flex-direction: column;
+  width: 100%;
+  max-height: 50%;
+  & ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.requestContainer {
+  margin: 0.8rem 0 ;
+  padding: 0.5rem;
+  background-color: $fourthColor;
+  @include displayFlexCenter;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100%;
+  & .requestForm {
+    @include displayFlexCenter;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  .formItems {
+    margin: 1rem 0;
+  }
+}
+.requestFormHidden {
+  display: none;
+}
+
+.successBar {
+  display: flex;
+}
+.successBarHidden {
+  display: none;
+}
+
+.requestHeader {
+  @include displayFlexCenter;
+  flex-direction: column;
+  padding: 1.5rem 2rem 1.5rem;
+}
+.neon {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-shadow: 0 0 3vw #F40A35;
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+
+
+
+/* Animate neon flicker */
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem #f40,
+            0 0 4rem #f40,
+            0 0 6rem #f40,
+            0 0 8rem #f40,
+            0 0 10rem #f40;
+        
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem #08f,
+            inset 0 0 2rem #08f,
+            0 0 4rem #08f,
+            inset 0 0 4rem #08f;        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+
+//form styling
+.requestForm .card {
+  min-width: 450px;
+}
+.requestForm .card form {
+  margin-top: 2rem;
+}
+.requestForm .card .pField {
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 960px) {
+  .requestForm .card {
+      width: 80%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .requestForm .card {
+      width: 100%;
+      min-width: 0;
+  }
 }

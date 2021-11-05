@@ -19,16 +19,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    & h1 {
-    font-size: calc(2vw + 2vh + 2vmin);
-    font-weight: bold;
-    line-height: 8.5rem;
-    letter-spacing: 1.5rem;
-    color: black;
-    text-shadow: 0px 4px 3px rgba(255,255,255,0.4),
-              0px 8px 13px rgba(0,0,0,0.1),
-              0px 18px 23px rgba(0,0,0,0.1);
-    }
     & h4 {
       color: $secondaryColor;
       text-align: right;
@@ -36,6 +26,16 @@
       font-size: calc(0.5vw + 0.5vh + 0.2vmin);
     }
   }
+  .bimha {
+    font-size: calc(2vw + 2vh + 2vmin);
+    font-weight: bold;
+    line-height: 8.5rem;
+    letter-spacing: calc(0.5vw + 0.5vh + 0.3rem);
+    color: black;
+    text-shadow: 0px 4px 3px rgba(255,255,255,0.4),
+              0px 8px 13px rgba(0,0,0,0.1),
+              0px 18px 23px rgba(0,0,0,0.1);
+    }
   & .smallLogo {
     margin-right: 2rem;
     height: auto;
@@ -87,6 +87,90 @@
              0px 18px 23px rgba(0,0,0,0.1);
 }
 
+//mobileMenu
+.menuMobile {
+  display: none;
+  justify-content: space-evenly;
+  font-size: 1.1rem;
+  background-color: white;
+  color: $secondaryColor;
+  & ul {
+    padding: 2rem 0;
+  }
+    & li {
+      display: flex;
+      padding:  0 0.8rem;
+      & .icon {
+        margin-right: 0.5rem;
+      }
+      & a {
+        text-decoration: none;
+        color:$primaryColor;
+        border: none;
+      }
+  }
+}
+.mobileHeader {
+  display: flex;
+  flex-direction: column;
+}
+.menuMobile__hamburger {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+//big menu
+.mobileListOpen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  & li {
+    padding: 1.5rem 0 ;
+  }
+  & a:hover {
+    text-decoration: none;
+  }
+}
+
+//small menu
+.mobileListSmallClosed {
+  display: none;
+}
+.mobileListSmallOpen {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5rem;
+  & li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1.7rem 0 ;
+  }
+  & a:hover {
+    text-decoration: none;
+  }
+}
+.mobileListClosed {
+  display: none;
+}
+
+.timsSmallMenuOpen, .u9SmallMenuOpen, .u11SmallMenuOpen, .u13SmallMenuOpen, .u15SmallMenuOpen, .u18SmallMenuOpen {
+  display: flex;
+  padding: 0 1rem;
+  & > * {
+  padding: 0 1rem;
+  }
+}
+.timsSmallMenuClosed, .u9SmallMenuClosed, .u11SmallMenuClosed, .u13SmallMenuClosed, .u15SmallMenuClosed, .u18SmallMenuClosed {
+  display: none;
+}
+
 //socialBar
 .socialBar {
   height: 4vh;
@@ -120,13 +204,19 @@
   justify-content: center;
   align-items: center;
 }
-  .icon {
-    height: 1.4vh;
-    width: 1.4vh;
-    color: rgb(230, 230, 230);
-    &:hover {
-      color: rgb(134, 134, 134);
-    }
+.icon {
+  height: 1.4vh;
+  width: 1.4vh;
+  color: rgb(230, 230, 230);
+  &:hover {
+    color: rgb(134, 134, 134);
+  }
+}
+.iconMobile {
+  height: 2vh;
+  width: 2vh;
+  color: $secondaryColor;
+  padding-right: 0.5rem;
 }
 
 //subMenu
@@ -142,7 +232,7 @@
     align-items: center;
     height: 4vh;
     background-color: black;
-    font-size: 1.5rem;
+    font-size: calc(0.5vw + 0.5vh + 0.5rem);
     font-weight: bold;
     color: white;
     padding: 1rem;
@@ -165,27 +255,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &:hover {
-      color: $primaryColor;
-    }
-  }
-  & a {
+    & a {
       text-decoration: none;
       &:hover {
-        color: $primaryColor;
+        background-color: $primaryColor;
       }
+    }
   }
 }
-.btn {
-  padding: 0.8rem 1.5rem;
+.bttn {
+  padding: 2rem 1.5rem;
   background-color: $secondaryColor;
   border: none;
+  font-size: calc(0.4vw + 0.4vh + 0.4rem);
 }
 
 //stick
 .stick {
   position:sticky;
   top: 0px;
+  z-index:999;
+}
+
+.logoArea {
+  @include displayFlexCenter;
+  & .logo {
+    height: auto;
+    width: 20%;
+    max-width: 20%;
+  }
 }
 
 //mediaqueries
@@ -193,12 +291,31 @@
   .container {
     padding: 0 1rem 0 0;
   }
+  .bttn {
+    padding: 0.6rem;
   }
-@media (max-width: 900px) {
-.container {
-  display: none;
+  .playerMenu {
+    li {
+      padding: 0.8rem 1.5rem;
+    }
+  }
+  .logo {
+    padding-left: 1rem;
+  }
 }
-.menu li {
-  padding: 0 0.4rem;
-}
+@media (max-width: 850px) {
+  .container {
+    display: none;
+  }
+  .menuMobile {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .menu li {
+    padding: 0 0.4rem;
+  }
+  .menuMobile__hamburger {
+    display: flex;
+  }
 }

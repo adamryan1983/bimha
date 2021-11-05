@@ -9,7 +9,7 @@ const MainMenu = () => {
     <div className={styles.mainMenu}>
       <div className={styles.logo}>
         <img src="/images/logo-trans-fill.png" alt="logo" className={styles.smallLogo}/>
-        <h1>BIMHA</h1>
+        <h1 className={styles.bimha}>BIMHA</h1>
         <h4>Home of the Miners</h4>
       </div>
       <ul className={styles.menu}>       
@@ -26,10 +26,10 @@ const MainMenu = () => {
           <ActiveLink href='/Covid/Covid'> COVID </ActiveLink>
         </li>
         <li>
-          <ActiveLink href='/FAQ/FAQ'> BOARD </ActiveLink>
+          <ActiveLink href='/Board/Board'> BOARD </ActiveLink>
         </li>
         <li>
-          <ActiveLink href='/FAQ/FAQ'> FUNDRAISING </ActiveLink>
+          <ActiveLink href='#'> FUNDRAISING </ActiveLink>
         </li>
         
       </ul>

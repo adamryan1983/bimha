@@ -1,10 +1,42 @@
+@use '@styles/variables.scss' as *;
+
 .container {
-  background-color: aquamarine;
-  height: 5vh;
-  width: 80vw;
+  background-color: black;
+  min-height: 6vh;
+  width: 100vw;
 }
 
-$duration: 10s;
+.scoreContainer {
+  font-size: 0.75rem;
+  display: inline-flex;
+  border: 1px solid grey;
+  flex-direction: column;
+  min-height: 6vh;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  & .scoreBox {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+    width: 100%;
+    & .containerLeft {
+      display: flex;
+      padding-right: 1rem;
+      flex-direction: column;
+    }
+    & .containerRight {
+      @include displayFlexCenter;
+      padding-left: 1rem;
+    }
+  }
+}
+
+
+//ticker
+$duration: 40s;
 
 @-webkit-keyframes ticker {
   0% {
@@ -32,21 +64,19 @@ $duration: 10s;
   }
 }
 
-.ticker__wrap {
-
+.tickerWrap {
+  
   width: 100%;
-  height: 100%;
   overflow: hidden;
-
+  height: 100%;
   background-color: rgba(#000, 0.9); 
   box-sizing: content-box;
 
   .ticker {
-
     display: inline-block;
-    height: 4rem;
-    line-height: 4rem;  
+    height: 100%;
     white-space: nowrap;
+    overflow: hidden;
     padding-right: 100%;
     box-sizing: content-box;
 
@@ -58,24 +88,23 @@ $duration: 10s;
            animation-name: ticker;
     -webkit-animation-duration: $duration;
             animation-duration: $duration;
+  }
 
-    &__item {
-
-      display: inline-block;
-
-      padding: 0 2rem;
+    .tickerItem {
+      display: inline-flex;
       font-size: 1rem;
-      color: white;   
-      & .gameContainer {
-        display: flex;
-        flex-direction: column;
-        & .summary {
-          display: flex;
-          flex-direction: column;
-        }
-      }
+      color: white; 
     }
 
   }
 
+  .winner {
+    color: red;
+  }
+
+@media (max-width: 768px) {
+  .container, .scoreContainer  {
+    min-height: 2vh;
+    padding: 0;
+  }
 }

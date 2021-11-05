@@ -1,12 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '@components/Home/Home.module.scss'
 import { useDivision } from '@context/state';
 import Main from '@components/Home/Main';
 
 import Landing from '@components/Home/Landing';
-import Ticker from '@components/Home/Ticker'
+import TickerPage from '@components/Home/Ticker'
 
 const Home: NextPage = () => {
   const { division, setDivision } = useDivision();
@@ -19,7 +18,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Landing />
-      <Ticker />
+      <TickerPage />
       <Main />
     </div>
   )

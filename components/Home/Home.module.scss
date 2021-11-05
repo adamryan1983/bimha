@@ -2,7 +2,7 @@
 
 .containerHome {
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   background-image: url('/images/background-fade.jpg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -35,4 +35,20 @@
     color: $primaryColor;
   }
 
+}
+
+@media (max-width: 1000px) {
+  .landing {
+    width: 90vw;
+    height: 50vh;
+    align-items: center;
+    padding-top: 0;
+    h1 {
+      font-size: 6rem;
+
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 }

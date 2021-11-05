@@ -8,6 +8,7 @@ import Footer from '@components/Footer/Footer'
 import styles from '@components/Menu/Main.module.scss'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import MobileMenu from '@components/Menu/MobileMenu'
 
 
 function MyApp({ Component, pageProps, }: AppProps) {
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps, }: AppProps) {
     <div className={styles.stick}>
       <Main />
     </div>
+    <MobileMenu />
     <Component {...pageProps} title="BIMHA" />
     <Footer />
   </DivisionContext.Provider>
