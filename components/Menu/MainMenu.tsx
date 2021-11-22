@@ -29,7 +29,7 @@ const MainMenu = () => {
           <ActiveLink href='/Board/Board'> BOARD </ActiveLink>
         </li>
         <li>
-          <ActiveLink href='#'> FUNDRAISING </ActiveLink>
+          <ActiveLink href='/Registration/Registration'> REGISTER A PLAYER </ActiveLink>
         </li>
         
       </ul>

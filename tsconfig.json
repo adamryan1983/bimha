@@ -33,7 +33,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "context/state.js", "components/ActiveLink.jsx", "components/Home/Right/RequestRide.jsx"  ],
+, "context/state.js", "components/ActiveLink.jsx", "components/Home/Right/RequestRide.jsx", "pages/Registration/Registration.tsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -7,7 +7,10 @@ import 'primereact/resources/primereact.css';
 const NewsLetter = () => {
   return (
     <div className={styles.newsletterContainer}>
-      <h2>Join our Newsletter</h2>
+      <div className={styles.header}>
+        <h3>Join our Newsletter</h3>
+        <div className={styles.headerRight} />
+      </div>
       <InputText type="text" placeholder="Email" />
       <Button>Subscribe</Button>
     </div>

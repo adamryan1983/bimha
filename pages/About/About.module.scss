@@ -1,6 +1,28 @@
 @use '@styles/variables.scss' as *;
 
 .container {
-  height: 100vh;
+  height: 125vh;
   @include displayFlexCenter;
+  flex-direction: column;
+  padding-top: 20vh;
+}
+
+.heading {
+  padding-bottom: 3rem;
+}
+
+.contentBI {
+  @include displayFlexCenter;
+  width: 75%;
+  padding: 1rem 0;
+}
+
+.blurb {
+  @include displayFlexCenter;
+  flex-direction: column;
+  width: 50%;
+  padding: 2rem 0;
+  & > p {
+    padding: 1rem;
+  }
 }

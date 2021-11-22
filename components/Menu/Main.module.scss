@@ -224,13 +224,13 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
-  height: 4vh;
+  height: 7vh;
   align-items: center;
   background-color: black;
   & .desc {
     display: flex;
     align-items: center;
-    height: 4vh;
+    height: 7vh;
     background-color: black;
     font-size: calc(0.5vw + 0.5vh + 0.5rem);
     font-weight: bold;
@@ -250,7 +250,7 @@
     border-style: solid;
     border-width: 0.5px 0.5px 0 0.5px;
     padding: 1rem 2rem;
-    height: 4vh;
+    height: 7vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -262,12 +262,6 @@
       }
     }
   }
-}
-.bttn {
-  padding: 2rem 1.5rem;
-  background-color: $secondaryColor;
-  border: none;
-  font-size: calc(0.4vw + 0.4vh + 0.4rem);
 }
 
 //stick

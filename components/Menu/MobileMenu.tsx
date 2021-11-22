@@ -7,7 +7,7 @@ import hamburger from './HamburgerMenu.module.scss'
 import Image from 'next/image'
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
-import { faInfoCircle, faQuestionCircle, faNotesMedical, faPerson, faMoneyBill, faHome } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
+import { faInfoCircle, faQuestionCircle, faNotesMedical, faPerson, faMoneyBill, faHome, faHockeyPuck } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
@@ -17,6 +17,7 @@ const covid = faNotesMedical as IconProp;
 const board = faPerson as IconProp;
 const money = faMoneyBill as IconProp;
 const home = faHome as IconProp;
+const puck = faHockeyPuck as IconProp;
 
 const NavBar = () => {
   const [toggled, setToggled] = useState(false);
@@ -157,6 +158,10 @@ const NavBar = () => {
           <li>
             <FontAwesomeIcon icon={money} className={styles.iconMobile}/>
             <ActiveLink href='#'> FUNDRAISING </ActiveLink>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={puck} className={styles.iconMobile}/>
+            <ActiveLink href='#'> REGISTER A PLAYER </ActiveLink>
           </li>
         </ul>
         </div>

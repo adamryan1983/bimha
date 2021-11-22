@@ -8,7 +8,6 @@
 }
 
 .right {
-  background-color: rgb(215, 250, 232);
   width: 30%;
   display: flex;
   justify-content: flex-start;
@@ -20,8 +19,9 @@
 
 .coachContainer {
   margin: 0.8rem 0 ;
-  background-color: $fourthColor;
+  background-color: rgb(41, 41, 41);
   @include displayFlexCenter;
+  padding-bottom: 0.5rem;
   flex-direction: column;
   width: 100%;
   max-height: 50%;
@@ -37,7 +37,7 @@
 }
 .gamesContainer {
   margin: 0.8rem 0 ;
-  background-color: $fourthColor;
+  background-color: rgb(41, 41, 41);
   @include displayFlexCenter;
   flex-direction: column;
   width: 100%;
@@ -52,9 +52,83 @@
     }
   }
 }
+
+.winner {
+  color: $primaryColor;
+}
+
+.gameBoard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  & > h3 {
+    color: $secondaryColor;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+  }
+}
+.scoreContainer {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.header {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 1rem 0 1rem 1rem;
+  background-color: $secondaryColor;
+  margin-bottom: 1rem;
+
+  &::before {
+    content: '';
+    width: 5px;
+    height: 100%;
+    background: $primaryColor;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  & > h3 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+}
+
+.headerRight {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #fec722;
+    width: 0px;
+    height: 56px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -54px;
+      bottom: 0px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 56px 54px;
+      border-color: transparent transparent #fec722 transparent;
+    }
+}
+
 .newsletterContainer {
   margin: 0.8rem 0 ;
-  background-color: $primaryColor;
+  padding-bottom: 1rem;
+  background-color: rgb(41, 41, 41);
   @include displayFlexCenter;
   flex-direction: column;
   width: 100%;
@@ -73,7 +147,7 @@
 .requestContainer {
   margin: 0.8rem 0 ;
   padding: 0.5rem;
-  background-color: $fourthColor;
+  background-color: rgb(41, 41, 41);
   @include displayFlexCenter;
   flex-direction: column;
   width: 100%;
@@ -82,6 +156,7 @@
     @include displayFlexCenter;
     flex-direction: column;
     padding: 1rem 0;
+    width: 90%;
   }
   .formItems {
     margin: 1rem 0;

@@ -3,7 +3,10 @@ import styles from './Right.module.scss';
 const Coaches = () => {
   return (
     <div className={styles.coachContainer}>
-      <h2>Coaching Staff</h2>
+      <div className={styles.header}>
+        <h3>Coaching Staff</h3>
+        <div className={styles.headerRight} />
+      </div>
       <ul>
         <div>Timbits</div>
         <li>Coach</li>

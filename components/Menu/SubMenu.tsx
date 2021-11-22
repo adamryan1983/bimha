@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import styles from './Main.module.scss'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router';
-import { useDivision, } from '@context/state';
+import { useDivision } from '@context/state';
 
 //primereact
 import { Menu } from 'primereact/menu';
@@ -85,29 +85,29 @@ const SubMenu: NextPage = () => {
       </div>
     <ul className={styles.playerMenu}>
       <li>
-      <Menu model={timbitChoices} popup ref={menuTim} id="popup_menu" />
-      <Button label="Timbits" className={styles.bttn} onClick={(event) => menuTim.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
-          {/* <Link href='/Roster/Roster'><a onClick={() => setDivision("timbits")}> Timbits </a></Link> */}
+        <Menu model={timbitChoices} popup ref={menuTim} id="popup_menu" />
+        <Button label="Timbits" className={styles.bttn} style={{'padding': '2vh 0'}} onClick={(event) => menuTim.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
       </li>
       <li>
         <Menu model={u9Choices} popup ref={menuU9} id="popup_menu" />
-        <Button label="U9" className={styles.bttn} onClick={(event) => menuU9.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
+        <Button label="U9" className={styles.bttn} style={{'padding': '2vh 1rem'}} onClick={(event) => menuU9.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
       </li>
+     
       <li>
         <Menu model={u11Choices} popup ref={menuU11} id="popup_menu" />
-        <Button label="U11" className={styles.bttn} onClick={(event) => menuU11.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
+        <Button label="U11" className={styles.bttn} style={{'padding': '2vh 1rem'}} onClick={(event) => menuU11.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
       </li>
       <li>
         <Menu model={u13Choices} popup ref={menuU13} id="popup_menu" />
-        <Button label="U13" className={styles.bttn} onClick={(event) => menuU13.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
+        <Button label="U13" className={styles.bttn} style={{'padding': '2vh 1rem'}} onClick={(event) => menuU13.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
       </li>
       <li>
         <Menu model={u15Choices} popup ref={menuU15} id="popup_menu" />
-        <Button label="U15" className={styles.bttn} onClick={(event) => menuU15.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
+        <Button label="U15" className={styles.bttn} style={{'padding': '2vh 1rem'}} onClick={(event) => menuU15.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
       </li>
       <li>
         <Menu model={u18Choices} popup ref={menuU18} id="popup_menu" />
-        <Button label="U18" className={styles.bttn} onClick={(event) => menuU18.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
+        <Button label="U18" className={styles.bttn} style={{'padding': '2vh 1rem'}} onClick={(event) => menuU18.current.toggle(event)} aria-controls="popup_menu" aria-haspopup />
       </li>
     </ul>
   </div>

@@ -28,6 +28,9 @@ const SocialBar = () => {
         <li>
           Donation
         </li>
+        <li>
+          Fundraising
+        </li>
       </ul>
     </div>
   )

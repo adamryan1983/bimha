@@ -1,0 +1,27 @@
+@use '@styles/variables.scss' as *;
+
+.container {
+  min-height: 125vh;
+  @include displayFlexCenter;
+  padding-top: 10vh;
+  color: white;
+}
+
+.register {
+  @include displayFlexCenter;
+  flex-direction: column;
+  width: 75%;
+  padding: 1rem 0;
+}
+ .section {
+    display: flex;
+    color: white;
+    background-color:$secondaryColor;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 1rem 0;
+    & p {
+      padding: 1rem 0;
+    }
+  }
