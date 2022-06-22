@@ -277,9 +277,19 @@
       width: 80%;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .requestForm .card {
       width: 100%;
       min-width: 0;
+  }
+
+  .right {
+    padding: 0rem;
+    width: 100vw;
+  }
+  .requestContainer, .coachContainer, .gamesContainer, .newsletterContainer {
+    min-width: 100vw;
+    margin: 0.5rem 0;
+    padding: 0;
   }
 }

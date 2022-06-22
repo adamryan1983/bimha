@@ -67,13 +67,12 @@ const header = (
         <h2>Schedule for {divs.division}</h2>
         <div className={styles.dataTable}>
 
-          <DataTable ref={dt} value={events!} selection={selectedEvents} onSelectionChange={(e) => setSelectedEvents(e.value)}
+          <DataTable className={styles.dataTableObject}ref={dt} value={events!} selection={selectedEvents} onSelectionChange={(e) => setSelectedEvents(e.value)}
             dataKey="id" paginator rows={10} rowsPerPageOptions={[5, 10, 25]}
             paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
             currentPageReportTemplate="Showing {first} to {last} of {totalRecords} events"
             globalFilter={globalFilter}
-            header={header}
-            className={styles.dataTable}>
+            header={header}>
 
             <Column selectionMode="multiple" headerStyle={{ width: '3rem' }}></Column>
             <Column field="date" header="Date" sortable></Column>

@@ -85,7 +85,7 @@ const header = (
               currentPageReportTemplate="Showing {first} to {last} of {totalRecords} players"
               globalFilter={globalFilter}
               header={header}
-              className={styles.dataTable}>
+              className={styles.dataTableObject}>
 
             <Column selectionMode="multiple" headerStyle={{ width: '3rem' }}></Column>
             <Column field="name" header="Name" sortable></Column>

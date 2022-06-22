@@ -101,3 +101,13 @@
     color: rgb(134, 134, 134);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .content .copyright{
+    font-size: 0.4rem;
+  }
+  .social {
+    font-size: 0.5rem;
+  }
+  
+}

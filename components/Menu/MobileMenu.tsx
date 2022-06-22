@@ -22,7 +22,6 @@ const puck = faHockeyPuck as IconProp;
 const NavBar = () => {
   const [toggled, setToggled] = useState(false);
   const [toggledSmall, setToggledSmall] = useState(false);
-  const [choice, setChoice] = useState('');
 
   const divs = useDivision()
 
@@ -33,7 +32,6 @@ const NavBar = () => {
   const [u15, setU15] = useState(false);
   const [u18, setU18] = useState(false);
 
-  const router = useRouter();
   const handleClickSmall = () => {
     setToggled(false)
     setToggledSmall(!toggledSmall)
@@ -130,90 +128,90 @@ const NavBar = () => {
           </div>
         </div>
         <div className={!toggled ? styles.mobileListClosed : styles.mobileListOpen}>
-        <ul>
-          <li className={styles.mobileHeader}>
-            <h3>BIMHA</h3>
-            <h4>Home of the Miners</h4>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={home} className={styles.iconMobile}/>
-            <ActiveLink href='/'> Home </ActiveLink>
-          </li>
-          <li className={styles.iconSection}>
-            <FontAwesomeIcon icon={info} className={styles.iconMobile}/>
-            <ActiveLink href='/About/About'> About </ActiveLink>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={question} className={styles.iconMobile}/>
-            <ActiveLink href='/FAQ/FAQ'> FAQ </ActiveLink>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={covid} className={styles.iconMobile}/>
-            <ActiveLink href='/Covid/Covid'> COVID </ActiveLink>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={board} className={styles.iconMobile}/>
-            <ActiveLink href='/Board/Board'> BOARD </ActiveLink>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={money} className={styles.iconMobile}/>
-            <ActiveLink href='#'> FUNDRAISING </ActiveLink>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={puck} className={styles.iconMobile}/>
-            <ActiveLink href='#'> REGISTER A PLAYER </ActiveLink>
-          </li>
-        </ul>
+          <ul>
+            <li className={styles.mobileHeader}>
+              <h3>BIMHA</h3>
+              <h4>Home of the Miners</h4>
+            </li>
+            <li onClick={() => setToggled(!toggled)}>
+              <FontAwesomeIcon icon={home} className={styles.iconMobile}/>
+              <ActiveLink href='/'> Home </ActiveLink>
+            </li>
+            <li onClick={() => setToggled(!toggled)}>
+              <FontAwesomeIcon icon={info} className={styles.iconMobile}/>
+              <ActiveLink href='/About/About'> About </ActiveLink>
+            </li>
+            <li onClick={() => setToggled(!toggled)}>
+              <FontAwesomeIcon icon={question} className={styles.iconMobile}/>
+              <ActiveLink href='/FAQ/FAQ'> FAQ </ActiveLink>
+            </li>
+            <li onClick={() => setToggled(!toggled)}>
+              <FontAwesomeIcon icon={covid} className={styles.iconMobile}/>
+              <ActiveLink href='/Covid/Covid'> COVID </ActiveLink>
+            </li>
+            <li onClick={() => setToggled(!toggled)}>
+              <FontAwesomeIcon icon={board} className={styles.iconMobile}/>
+              <ActiveLink href='/Board/Board'> BOARD </ActiveLink>
+            </li>
+            <li onClick={() => setToggled(!toggled)}>
+              <FontAwesomeIcon icon={money} className={styles.iconMobile}/>
+              <ActiveLink href='#'> FUNDRAISING </ActiveLink>
+            </li>
+            <li onClick={() => setToggled(!toggled)}>
+              <FontAwesomeIcon icon={puck} className={styles.iconMobile}/>
+              <ActiveLink href='#'> REGISTER A PLAYER </ActiveLink>
+            </li>
+          </ul>
         </div>
         <div className={!toggledSmall ? styles.mobileListSmallClosed : styles.mobileListSmallOpen}>
 
-        <ul >
-          <li>
-          <ActiveLink href='/'> Home </ActiveLink>
-          </li>
-          <li onClick={() => handleClickDivision('timbits')}>
-            Timbits
-            <div className={tims ? styles.timsSmallMenuOpen : styles.timsSmallMenuClosed}>
-              <ActiveLink href='/Roster/Roster'> Roster </ActiveLink>
-              <ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink>
-            </div>
-          </li>
-          <li onClick={() =>handleClickDivision('u9')}>
-            U9
-            <div className={u9 ? styles.u9SmallMenuOpen : styles.u9SmallMenuClosed}>
-              <ActiveLink href='/Roster/Roster'> Roster </ActiveLink>
-              <ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink>
-            </div>
-          </li>
-          <li onClick={() => handleClickDivision('u11')}>
-            U11
-            <div className={u11 ? styles.u11SmallMenuOpen : styles.u11SmallMenuClosed}>
-              <ActiveLink href='/Roster/Roster'> Roster </ActiveLink>
-              <ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink>
-            </div>
-          </li>
-          <li onClick={() => handleClickDivision('u13')}>
-            U13
-            <div className={u13 ? styles.u13SmallMenuOpen : styles.u13SmallMenuClosed}>
-              <ActiveLink href='/Roster/Roster'> Roster </ActiveLink>
-              <ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink>
-            </div>
-          </li>
-          <li onClick={() => handleClickDivision('u15')}>
-            U15
-            <div className={u15 ? styles.u15SmallMenuOpen : styles.u15SmallMenuClosed}>
-              <ActiveLink href='/Roster/Roster'> Roster </ActiveLink>
-              <ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink>
-            </div>
-          </li>
-          <li onClick={() => handleClickDivision('u18')}>
-            U18
-            <div className={u18 ? styles.u18SmallMenuOpen : styles.u18SmallMenuClosed}>
-              <ActiveLink href='/Roster/Roster'> Roster </ActiveLink>
-              <ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink>
-            </div>
-          </li>
-        </ul>
+          <ul className={styles.mobileListTeam}>
+            <li>
+              <ActiveLink href='/'> Home </ActiveLink>
+            </li>
+            <li onClick={() => handleClickDivision('timbits')}>
+              <div>Timbits</div>
+              <div className={tims ? styles.timsSmallMenuOpen : styles.timsSmallMenuClosed}>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Roster/Roster'> Roster </ActiveLink></div>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink></div>
+              </div>
+            </li>
+            <li onClick={() =>handleClickDivision('u9')}>
+              <div>U9</div>
+              <div className={u9 ? styles.u9SmallMenuOpen : styles.u9SmallMenuClosed}>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Roster/Roster'> Roster </ActiveLink></div>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink></div>
+              </div>
+            </li>
+            <li onClick={() => handleClickDivision('u11')}>
+              <div>U11</div>
+              <div className={u11 ? styles.u11SmallMenuOpen : styles.u11SmallMenuClosed}>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Roster/Roster'> Roster </ActiveLink></div>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink></div>
+              </div>
+            </li>
+            <li onClick={() => handleClickDivision('u13')}>
+              <div>U13</div>
+              <div className={u13 ? styles.u13SmallMenuOpen : styles.u13SmallMenuClosed}>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Roster/Roster'> Roster </ActiveLink></div>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink></div>
+              </div>
+            </li>
+            <li onClick={() => handleClickDivision('u15')}>
+              <div>U15</div>
+              <div className={u15 ? styles.u15SmallMenuOpen : styles.u15SmallMenuClosed}>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Roster/Roster'> Roster </ActiveLink></div>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink></div>
+              </div>
+            </li>
+            <li onClick={() => handleClickDivision('u18')}>
+              <div>U18</div>
+              <div className={u18 ? styles.u18SmallMenuOpen : styles.u18SmallMenuClosed}>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Roster/Roster'> Roster </ActiveLink></div>
+                <div onClick={()=> setToggledSmall(!toggledSmall)}><ActiveLink href='/Schedule/Schedule'> Schedule </ActiveLink></div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </>

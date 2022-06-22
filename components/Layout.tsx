@@ -28,8 +28,6 @@ const Layout = (props:any) => {
 export default Layout;
 
 
-
-
 {/* <div className={styles.layoutContainer}>
 <Head>
   <title>{props.title}</title>

@@ -1,4 +1,5 @@
 .container {
+  margin-top: 2rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,4 +10,16 @@
 .dataTable {
   color: white;
   background-color: black;
+}
+
+//media query
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    width: auto;
+    margin-top: 0.5rem;
+  }
+  .dataTableObject {
+    font-size: 0.8rem;
+  }
 }

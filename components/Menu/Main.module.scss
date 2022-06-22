@@ -305,11 +305,17 @@
     display: flex;
     flex-direction: column;
 
+
   }
   .menu li {
     padding: 0 0.4rem;
+    cursor: pointer;
   }
   .menuMobile__hamburger {
     display: flex;
+  }
+
+  .mobileListTeam > li > div {
+    cursor: pointer;
   }
 }
